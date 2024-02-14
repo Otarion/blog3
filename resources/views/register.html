@@ -1,0 +1,34 @@
+{% extends "layouts/auth.html" %}
+
+{% block title %}
+Inscription - {{ parent() }}
+{% endblock %}
+
+{% block action %}
+/inscription
+{% endblock %}
+
+{% block content %}
+{% set name = "name" %}
+{% set label = "Nom complet" %}
+{{ include('components/input.html') }}
+
+{% set name = "email" %}
+{% set label = "Adresse e-mail" %}
+{% set type = "email" %}
+{{ include('components/input.html') }}
+
+{% set name = "password" %}
+{% set label = "Mot de passe" %}
+{% set type = "password" %}
+{{ include('components/input.html') }}
+
+{% set name = "password_confirmation" %}
+{% set label = "Confirmation du mot de passe" %}
+{% set type = "password" %}
+{{ include('components/input.html') }}
+{% endblock %}
+
+{% block textButton %}
+Inscription
+{% endblock %}

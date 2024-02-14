@@ -1,0 +1,26 @@
+{% extends "layouts/auth.html" %}
+
+{% block title %}
+Connexion - {{ parent() }}
+{% endblock %}
+
+{% block action %}
+/connexion
+{% endblock %}
+
+
+{% block content %}
+{% set name = "email" %}
+{% set label = "Adresse e-mail" %}
+{% set type = "email" %}
+{{ include('components/input.html') }}
+
+{% set name = "password" %}
+{% set label = "Mot de passe" %}
+{% set type = "password" %}
+{{ include('components/input.html') }}
+{% endblock %}
+
+{% block textButton %}
+Connexion
+{% endblock %}
